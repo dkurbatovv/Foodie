@@ -1,0 +1,102 @@
+* {
+    font-family: 'Inter', sans-serif;
+}
+
+.resipes {
+    padding: 0 15px;
+    border-bottom: 1px solid silver;
+}
+
+.inform {
+    display: flex;
+    align-items: center;
+    margin: 50px 50px;
+
+}
+
+.inform h2 {
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 58px;
+}
+
+.inform p {
+    width: 620px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    color: #000;
+    opacity: 60%;
+}
+
+.recipe-cards {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.card-item {
+    width: 290px;
+    height: 316px;
+    border-radius: 30px;
+    margin: 0 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%; /* Установите желаемую высоту для карточки */
+    cursor: pointer;
+}
+
+.card-item .main {
+    width: 100%;
+    height: 200px; 
+    object-fit: cover; 
+    border-radius: 20px;
+}
+
+.short-inform {
+    margin-top: 10px;
+}
+
+.title {
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 32px;
+    text-align: left;
+    color: #000;
+    height: 52px;
+    margin-bottom: 25px;
+    margin-top: 20px;
+}
+
+.recipe-items {
+    display: flex;
+
+    margin-bottom: 20px;
+    margin-top: auto;
+}
+
+.recipe-shape {
+    display: flex;
+    align-items: center;
+    margin: 0 15px 0 0 ;
+}
+
+.recipe-shape img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.recipe-shape p {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    text-align: left;
+    color: #000;
+    opacity: 60%;
+}

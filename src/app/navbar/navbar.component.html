@@ -1,0 +1,24 @@
+<div class="navbar">
+  <div class="logo">Foodie</div>
+  <div class="menu">
+    <a routerLink="">Главная</a>
+    <a [routerLink]="['/recipe']">Каталог рецептов</a>
+  </div>
+  <div  class="user-info" >
+    
+    <div class="user-dropdown" (click)="toggleDropdown()" *ngIf="userIsLoggedIn(); else loginButton">
+      
+      <p class="full-name">{{ getUserInfo().fullname }}</p>
+      <p class="role">{{ getUserInfo().role === 'user' ? 'Пользователь' : getUserInfo().role }}</p>
+      <div *ngIf="showDropdown" class="drop-menu">
+        <p class="text">Вы вошли как </p>
+        <p>{{ getUserInfo().fullname }}</p>
+        <a *ngIf="showDropdown" class="settings" href="#">Настройки аккаунта</a>
+        <p><a *ngIf="showDropdown" class="logout-button" (click)="exit()">Выйти</a></p>
+      </div>
+    </div>
+  </div>
+  <ng-template #loginButton>
+    <button class="login-button" [routerLink]="['/auth']">Войти</button>
+  </ng-template>
+</div>

@@ -1,0 +1,14 @@
+<div class="news">
+    <div class="container">
+        <div class="inform">
+            <div class="news-description">
+                <h3>Хотите получать новые рецепты?</h3>
+                <p>Не пропустите ни одного вкусного рецепта! Подпишитесь на нашу рассылку, чтобы получать новые кулинарные идеи и рецепты прямо в свою почту.</p>
+            </div>
+            <div class="newsletter">
+                <input type="text" placeholder="Введите ваш email.." [(ngModel)]="email" name="email" required email>
+                <button [disabled]="!email" (click)="showSuccess()">Подписаться</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+<app-navbar></app-navbar>
+
+<div class="error-container">
+    <div class="error-text">
+      <p class="error-code">404 ОШИБКА</p>
+      <p class="error-message">Страница не найдена</p>
+      <p class="error-description">К сожалению мы не смогли найти страницу, которую вы ищите</p>
+      <a (click)="goBack()">Назад</a>
+      <a [routerLink]="['']">На главную</a>
+    </div>
+    <div class="error-image">
+        <img src="../assets/Image.jpg" alt="Ваше изображение" >
+    </div>
+  </div>
+  

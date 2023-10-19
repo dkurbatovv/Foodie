@@ -1,0 +1,108 @@
+<app-navbar></app-navbar>
+<div class="new-recipe" [formGroup]="recipeForm">
+    <h1>Создание рецепта</h1>
+    <div class="section-one">
+        <h2>Основная информация</h2>
+        <div class="item">
+            <div class="shape"></div>
+            <div class="item-elem">
+                <p>Название рецепта</p>
+                <input class="long" type="text" formControlName="recipeName" >
+
+            </div>
+            <div class="shape"></div>
+        </div>
+        <div class="item">
+            <div class="shape"></div>
+            <div class="item-elem">
+                <p>Краткое описание</p>
+                <textarea formControlName="recipeDescription"></textarea>
+            </div>
+            <div class="shape"></div>
+        </div>
+        <div class="item">
+            <div class="shape"></div>
+            <div class="item-elem">
+                <p>Фотография</p>
+                <input class="long" type="file" accept="image/*" formControlName="recipePhoto" (change)="onFileSelected($event)">
+            </div>
+            <div class="shape"></div>
+        </div>
+    </div>
+    <div class="section-two">
+        <h2>Дополнительная информация</h2>
+        <div class="item">
+            <div class="shape"></div>
+            <div class="item-elem">
+                <p>Категория</p>
+                <input class="short" type="text" formControlName="recipeCategory">
+            </div>
+        </div>
+        <div class="item">
+            <div class="shape"></div>
+            <div class="item-elem">
+                <p>Время приготовления</p>
+                <input class="short" type="text" formControlName="recipeTime">
+            </div>
+        </div>
+        <div class="item">
+            <div class="shape"></div>
+            <div class="item-elem">
+                <p>Первый ингридиент</p>
+                <input class="long" type="text" formControlName="recipeFirstThing">
+            </div>
+        </div>
+        <div class="item">
+            <div class="shape"></div>
+            <div class="item-elem">
+                <p>Белки</p>
+                <input class="long" type="text" formControlName="recipeB">
+            </div>
+        </div>
+        <div class="item">
+            <div class="shape"></div>
+            <div class="item-elem">
+                <p>Жиры</p>
+                <input class="short" type="text" formControlName="recipeG">
+            </div>
+        </div>
+        <div class="item">
+            <div class="shape"></div>
+            <div class="item-elem">
+                <p>Углеводы</p>
+                <input class="short" type="text" formControlName="recipeU">
+            </div>
+        </div>
+        <div class="item">
+            <div class="shape"></div>
+            <div class="item-elem">
+                <p>Калории</p>
+                <input class="short" type="text" formControlName="recipeK">
+            </div>
+            <div class="shape"></div>
+        </div>
+
+        <h2>Детальная информация</h2>
+        <div class="short-description">Детально опишите первый шаг вашего рецепта</div>
+
+        <div class="item">
+            <div class="shape"></div>
+            <div class="item-elem">
+                <p>Краткое действие первого шага</p>
+                <input class="short" type="text" placeholder="Разогреть сковородку" formControlName="recipeShort">
+            </div>
+        </div>
+        <div class="item">
+            <div class="shape"></div>
+            <div class="item-elem">
+                <p>Описание первого шага</p>
+                <textarea placeholder="Разогреть сковородку. Затем положить туда репчатый лук" formControlName="recipeFirstStep"></textarea>
+            </div>
+            <div class="shape"></div>
+        </div>
+    </div>
+    <button type="submit" (click)="onSubmit(); checkAndMarkInvalidFields()">
+        <img class="send" src="../assets/letter.png">Отправить рецепт
+    </button>
+</div>
+

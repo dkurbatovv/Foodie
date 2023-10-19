@@ -1,0 +1,58 @@
+table {
+    width: 1000px;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-radius: 8px;
+    margin-left: 60px;
+    margin-top: 40px;
+
+}
+
+thead {
+    background-color: #f2f2f2;
+}
+
+th {
+    padding: 10px;
+    text-align: left;
+    color: #6B7280;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+table th,
+table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+
+td {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    text-align: left;
+}
+
+.user-info {
+    display: flex;
+}
+
+.user-info img {
+    border-radius: 50px;
+    padding: 10px 10px;
+    width: 40px;
+    height: 40px;
+}
+
+.name {
+    padding: 3px 10px;
+}
+
+.active-status {
+    color: green;
+}
+
+.edit {
+    color: #3A3395;
+    text-decoration: none;
+}

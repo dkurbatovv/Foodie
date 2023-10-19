@@ -1,0 +1,121 @@
+* {
+  font-family: 'Inter', sans-serif;
+}
+
+.new-recipe {
+  margin: 10px 20px 100px 20px;
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0;
+  text-align: left;
+}
+
+h2 {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0;
+  text-align: left;
+  color: #111827;
+  margin-top: 35px;
+}
+
+.item-elem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 400px;
+}
+
+.shape {
+  height: 1px;
+  /* Высота 1 пиксель */
+  background-color: #ccc;
+  /* Цвет тонкой полоски */
+  margin: 25px 0px;
+}
+
+.item p {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0;
+  text-align: left;
+  color: #374151;
+}
+
+.long {
+  width: 450px;
+  height: 25px;
+  padding: 9px 13px;
+  border-radius: 6px;
+  border: 1px solid #D1D5DB;
+  margin-left: 350px;
+}
+
+textarea {
+  width: 450px;
+  height: 40px;
+  min-height: 100px;
+  padding: 9px 13px;
+  border-radius: 6px;
+  border: 1px solid #D1D5DB;
+  resize: both;
+  overflow: auto;
+  margin-left: 350px;
+}
+
+
+.section-two {
+  margin-top: 75px;
+}
+
+
+.short-description {
+  margin: 0;
+  padding: 0;
+  color: #6B7280;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.short {
+  width: 350px;
+  height: 25px;
+  padding: 9px 13px;
+  border-radius: 6px;
+  border: 1px solid #D1D5DB;
+  margin-right: 100px;
+}
+
+button {
+  width: 226px;
+  height: 50px;
+  background-color: #3A3395;
+  color: white;
+  font-weight: 500;
+  font-size: 16px;
+  float: right;
+  border-radius: 6px;
+  border: 0;
+}
+
+.send {
+  margin-right: 10px;
+}
+
+.error-border {
+  border: 1px solid red;
+}
+
+.warning {
+  background-image: url('../../assets/Exclamation circle.png');
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 20px;
+}

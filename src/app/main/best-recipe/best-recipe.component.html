@@ -1,0 +1,45 @@
+<div class="recipes">
+    <div class="inform">
+        <h2>Лучшие рецепты</h2>
+        <p>На нашем сайте вы найдете лучшие рецепты, которые помогут вам создавать великолепные блюда и порадовать своих близких и гостей своим кулинарным мастерством.</p>
+    </div>
+
+    <div class="recipe-cards">
+        <div class="card-item" *ngFor="let recipe of recipes.slice(0, 3)" [routerLink]="['/recipe', recipe.id]">
+            <img class="main" src="{{ recipe.image }}" alt="Изображение рецепта">
+            <p class="title">{{ recipe.title }}</p>
+            <div class="card-content">
+                <div class="recipe-items">
+                    <div class="recipe-shape">
+                        <img src="../assets/Timer.png" alt="Таймер">
+                        <p class="short-inform">{{ recipe.timeCooking }} Минут</p>
+                    </div>
+                    <div class="recipe-shape">
+                        <img src="../assets/ForkKnife.png" alt="Столовые приборы">
+                        <p class="short-inform">{{ recipe.tags }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <button (click)="loadMoreRecipes()" *ngIf="showLoadMoreButton">Посмотреть еще</button>
+</div>
+
+
+<div class="recipe-cards">
+    <div class="card-item" *ngFor="let recipe of randomRecipes">
+        <img class="main" src="{{ recipe.image }}" alt="Изображение рецепта">
+        <p class="title">{{ recipe.title }}</p>
+        <div class="recipe-items">
+            <div class="recipe-shape">
+                <img src="../assets/Timer.png" alt="Таймер">
+                <p class="short-inform">{{ recipe.timeCooking }} Минут</p>
+            </div>
+            <div class="recipe-shape">
+                <img src="../assets/ForkKnife.png" alt="Таймер">
+                <p class="short-inform">{{ recipe.tags }}</p>
+            </div>
+        </div>
+    </div>
+</div>

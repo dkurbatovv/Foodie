@@ -1,0 +1,40 @@
+<table>
+    <thead>
+      <tr>
+        <th>Название рецепта</th>
+        <th>Краткое описание</th>
+        <th>ID рецепта</th>
+        <th>Категория</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let recipe of recipes">
+        <td>{{ recipe.title }}</td>
+        <td>{{ recipe.body }}</td>
+        <td>{{ recipe.id }}</td>
+        <td>{{ recipe.tags }}</td>
+        <td>
+          <div class="item">
+            <a class="edit">
+              <img src="../assets/pencil.png" alt="Карандашь">
+            </a>
+            <a class="edit">
+              <img src="../assets/delete.png" alt="Корзина" (click)="openModal(recipe.id)">
+            </a>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <div class="modal" [class.active]="modalOpen">
+    <div class="modal-content">
+        <h2>Удаление рецепта</h2>
+        <p>Вы действительно хотите удалить этот рецепт?</p>
+        <button class="close" (click)="closeModal()">Закрыть</button>
+        <button class="button-share" >Удалить</button>
+    </div>
+</div>
+  

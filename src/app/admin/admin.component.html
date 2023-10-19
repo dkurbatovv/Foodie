@@ -1,0 +1,24 @@
+    <app-navbar></app-navbar>
+    <div class="admin">
+        <h1>Панель администрирования</h1>
+
+        <div class="control">
+            <div class="user" [class.act]="isUsersActive">
+                <a routerLink="/admin/users" [routerLinkActive]="'act'">Управление пользователями</a>
+            </div>
+            <div class="recipe" [class.act]="isRecipesActive">
+                <a routerLink="/admin/recipes" [routerLinkActive]="'act'">Управление рецептами</a>
+            </div>
+        </div>
+    </div>
+
+    <ng-container *ngIf="showUsers">
+        <app-users></app-users>
+    </ng-container>
+
+    <ng-container *ngIf="showRecipes">
+        <app-recipes></app-recipes>
+    </ng-container>
+
+
+    <router-outlet></router-outlet>

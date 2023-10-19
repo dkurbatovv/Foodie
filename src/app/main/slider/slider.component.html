@@ -1,0 +1,39 @@
+<div class="slider">
+    <button (click)="prevRecipe()">Назад</button>
+    <div class="recipe">
+        <div class="featured-recipe">
+            <div class="container">
+                <div class="recipe-description">
+                    <h1>{{ recipe.title }}</h1>
+                    <p class="short-inform">{{ recipe.body }}</p>
+                    <div class="inform-section">
+                        <div class="recipe-description-button">
+                            <img src="../assets/Timer.png" alt="Таймер">
+                            <p class="short-inform">{{ recipe.timeCooking }} Минут</p>
+                        </div>
+                        <div class="recipe-description-button">
+                            <img src="../assets/ForkKnife.png" alt="Таймер">
+                            <p class="short-inform">{{ recipe.tags }}</p>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="card-user">
+                            <img [src]="recipe.user.image" alt="Изображение пользователя">
+                            <div class="user-details">
+                                <p id="name">{{ recipe.user.name }}</p>
+                                <p id="date">{{ recipe.user.date | dateFormat }}</p>
+                            </div>
+                        </div>
+                        <div class="video">
+                            <button [routerLink]="['/recipe', recipe.id]">Посмотреть</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="recipe-img">
+                    <img src="{{ recipe.image }}" alt="Изображение рецепта" width="660" height="640">
+                </div>
+            </div>
+        </div>
+    </div>
+    <button (click)="nextRecipe()">Вперед</button>
+  </div>

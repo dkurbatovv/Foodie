@@ -1,0 +1,26 @@
+<div class="resipes">
+    <div class="inform">
+        <h2>Попробуйте эти вкусные рецепты</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab omnis nulla aliquam alias sint iste placeat repellendus molestias accusantium ipsum.</p>
+    </div>
+
+    <div class="recipe-cards">
+        <div class="card-item" *ngFor="let recipe of recipes.slice(0, loadedRecipeCount)" [routerLink]="['/recipe', recipe.id]">
+            <img class="main" src="{{ recipe.image }}" alt="Изображение рецепта">
+            <p class="title">{{ recipe.title }}</p>
+            <div class="card-content">
+                <div class="recipe-items">
+                    <div class="recipe-shape">
+                        <img src="../assets/Timer.png" alt="Таймер">
+                        <p class="short-inform">{{ recipe.timeCooking }} Минут</p>
+                    </div>
+                    <div class="recipe-shape">
+                        <img src="../assets/ForkKnife.png" alt="Таймер">
+                        <p class="short-inform">{{ recipe.tags }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    

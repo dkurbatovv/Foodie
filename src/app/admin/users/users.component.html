@@ -1,0 +1,27 @@
+<table>
+    <thead>
+      <tr>
+        <th>Наименование</th>
+        <th>Статус</th>
+        <th>Роль</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td>
+          <div class="user-info">
+            <img [src]="user.image" alt="{{ user.fullName }}" width="50" height="50">
+            <div>
+              <div class="name">{{ user.fullName }}</div>
+              <div class="name">{{ user.username }}</div>
+            </div>
+          </div>
+        </td>
+        <td class="active-status">Активен</td>
+        <td>{{ user.role === 'admin' ? 'Администратор' : 'Пользователь' }}</td>
+        <td><a class="edit">Редактировать</a></td>
+      </tr>
+    </tbody>
+  </table>
+  

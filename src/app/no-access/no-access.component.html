@@ -1,0 +1,15 @@
+<app-navbar></app-navbar>
+
+<div class="error-container">
+    <div class="error-text">
+      <p class="error-code">401 ОШИБКА</p>
+      <p class="error-message">Доступ запрещен</p>
+      <p class="error-description">У вас нет прав на просмотр этого раздела</p>
+      <a (click)="goBack()">Назад</a>
+      <a [routerLink]="['']">На главную</a>
+    </div>
+    <div class="error-image">
+        <img src="../assets/Image.jpg" alt="Ваше изображение" >
+    </div>
+  </div>
+  

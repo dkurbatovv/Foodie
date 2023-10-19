@@ -1,0 +1,24 @@
+<app-navbar></app-navbar>
+<div class="content">
+    <div class="header">
+      <h2>Зарегистрируйте ваш аккаунт</h2>
+    </div>
+    <div class="card">
+      <form [formGroup]="registrationForm" (submit)="onSubmit()">
+        <div class="input-container">
+          <p>Логин</p>
+          <input type="text" formControlName="login" placeholder="loginname">
+        </div>
+        <div class="input-container">
+          <p>Пароль</p>
+          <input type="text" formControlName="password" placeholder="password">
+        </div>
+      
+        <div class="button">
+          <button class="login-button" type="submit">Зарегистрироватьcя</button>
+        </div>
+      </form>         
+    </div>
+  </div>
+  
+  

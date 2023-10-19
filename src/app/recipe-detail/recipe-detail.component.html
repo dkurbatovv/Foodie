@@ -1,0 +1,127 @@
+<app-navbar></app-navbar>
+<div class="recipe">
+    <h1>{{ recipe.title }}</h1>
+    <div class="recipe-card">
+
+        <div class="user-info">
+            <div class="user-card">
+                <div class="user-img">
+                    <img [src]="recipe.user.image" alt="Изображение пользователя">
+                </div>
+                <div class="information">
+                    <div class="name">
+                        {{recipe.user.name}}
+                    </div>
+                    <div class="date">
+                        <p id="date">{{ recipe.user.date | dateFormat }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="recipe-inform">
+                <div class="recipe-time">
+                    <img src="../assets/Timer.png" alt="Таймер">
+                </div>
+                <div class="recipe-time">
+                    <p class="time-text">Время приготовления</p>
+                    <p class="time">{{recipe.timeCooking}} Минут</p>
+                </div>
+            </div>
+
+            <div class="recipe-inform">
+                <img class="img-fork" src="../assets/ForkKnife.png" alt="Столовые приборы">
+                <p class="short-inform">{{ recipe.tags }}</p>
+            </div>
+        </div>
+        <div class="possibilities">
+            <div class="possibilities-item">
+                <div class="item-card">
+                    <div class="shape" (click)="printPage()">
+                        <img src="../assets/printer.png" alt="Принтер">
+                    </div>
+                </div>
+                <div class="item-card">
+                    <div class="shape" (click)="openModal()">
+                        <img src="../assets/share.png" alt="Поделиться">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<div class="modal" [class.active]="modalOpen">
+        <div class="modal-content">
+            <h2>Поделиться этим рецептом?</h2>
+            <p>Вы хотите поделиться этим рецептом со всеми?</p>
+            <button class="close" (click)="closeModal()">Закрыть</button>
+            <button class="button-share"(click)="closeModal()">Поделиться</button>
+        </div>
+ </div>
+    <div class="recipe-details">
+        <div class="recipe-image">
+            <img src="{{ recipe.image }}" alt="Фото блюда">
+        </div>
+        <div class="recipe-compound">
+            <h3>Пищевая ценность</h3>
+            <div class="kkal">
+                <p class="kbgu">Калории</p>
+                <p class="value">{{ recipe.foodValue.calories }} ккал</p>
+            </div>
+            <div class="kkal">
+                <p class="kbgu">Белки</p>
+                <p class="value">{{ recipe.foodValue.belki }} г</p>
+            </div>
+            <div class="kkal">
+                <p class="kbgu">Жиры</p>
+                <p class="value">{{ recipe.foodValue.fats }} г</p>
+            </div>
+            <div class="kkal">
+                <p class="kbgu">Углеводы</p>
+                <p class="value">{{ recipe.foodValue.carbohydrates }} г</p>
+            </div>
+            <p class="above">Значения приблизительные</p>
+        </div>
+    </div>
+</div>я
+
+<p class="text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore laudantium laboriosam adipisci, dolores ad dicta. Optio alias laboriosam pariatur doloremque nulla unde, tenetur suscipit, laudantium voluptatibus facilis magnam vitae vel. Delectus saepe mollitia debitis eveniet magnam quis ea doloribus id eos eaque laudantium voluptatibus, reiciendis modi earum ducimus, illo, qui aut nam. Delectus, atque est. Sequi libero illo quo, aliquid nam, odit molestiae qui rem necessitatibus quaerat neque maxime quam.</p>
+
+<div class="more-information">
+    <div class="steps">
+        <h2>Ингридиенты</h2>
+        <h3>Что вам может пригодиться</h3>
+        <div class = "step" *ngFor="let step of steps; let i = index">
+            <input type="checkbox" [(ngModel)]="isTextStriked[i]">
+            <p [ngClass]="{'text-decoration-line-through': isTextStriked[i]}">Lorem ipsum dolor sit amet.</p>
+        </div>
+    </div>
+    <div class="another-recipes">
+        <div class="recipe-cards">
+            <h3>Прочие рецепты</h3>
+            <div class="card-item" *ngFor="let recipe of recipesAnother.slice(0, loadedRecipeCount)" [routerLink]="['/recipe', recipe.id]">
+                <img class="image" src="{{ recipe.image }}" alt="Изображение рецепта">
+                <div class="recipe-info">
+                    <div class="title">
+                        {{recipe.title}}
+                    </div>
+                    <div class="user-name">
+                        Oт {{recipe.user.name}}
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="another-steps">
+        <h2>Шаги приготовления</h2>
+        <div class = "step-item" *ngFor="let step of anotherSteps; let i = index">
+            <div class="step-info">
+                <input type="checkbox" [(ngModel)]="anotherTextStriked[i]">
+                <p class="step-text"> <span>{{i+1}}. </span> <span [ngClass]="{'text-decoration-line-through': anotherTextStriked[i]}">Lorem ipsum dolor sit amet.</span></p>
+            </div>
+            <div class="step-description">
+                <p [ngClass]="{'text-decoration-line-through': anotherTextStriked[i]}">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi ipsum fuga distinctio possimus ex. Vitae explicabo quo exercitationem deleniti optio suscipit eligendi, accusamus fugit. Facilis debitis earum iusto exercitationem, officiis atque aperiam recusandae eius temporibus eveniet accusantium. Cum facere obcaecati quisquam, hic quis soluta dolores ipsa voluptatibus nam blanditiis in quod ex facilis nobis quam perferendis esse officiis vel eligendi numquam sit deserunt repudiandae. Nostrum suscipit voluptatum maxime ipsam aliquam ipsa non facere error, eius obcaecati, unde iusto omnis laborum ad consequuntur nobis eaque incidunt earum architecto? Sequi nisi perferendis quasi quibusdam totam quidem culpa quo itaque. Ratione, minima perspiciatis.</p>
+            </div>
+        </div>
+    </div>
+
+<app-try-recipe></app-try-recipe>
